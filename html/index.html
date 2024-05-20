@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="sentry.bundle.js" crossorigin="anonymous"></script>
+        <script>
+            Sentry.init({
+                dsn: "",
+                integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+                tracesSampleRate: 1.0,
+                replaysSessionSampleRate: 1.0,
+                replaysOnErrorSampleRate: 1.0,
+                debug: true,
+            });
+        </script>
+    </head>
+    <body>
+        hello worlds
+        <button onclick="clicked()">Click me to throw error</button>
+        <script>
+            function clicked(){
+                console.log('clicked');
+                somethingWrong();
+            }
+        </script>
+    </body>
+</html>
