@@ -1,0 +1,8 @@
+dev:
+	docker-compose run dev bash
+up:
+	docker-compose up dev
+down:
+	docker-compose down
+
+.PHONY:help
