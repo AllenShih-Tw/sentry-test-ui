@@ -3,7 +3,7 @@
         <script src="sentry.bundle.js" crossorigin="anonymous"></script>
         <script>
             Sentry.init({
-                dsn: "",
+                dsn: "https://the-dsn@allen-test.com.tw",
                 integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
                 tracesSampleRate: 1.0,
                 replaysSessionSampleRate: 1.0,
